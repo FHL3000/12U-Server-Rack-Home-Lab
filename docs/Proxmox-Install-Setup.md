@@ -1,60 +1,53 @@
-# Proxmox Installation & Initial Setup
+# Proxmox Installation & Optimized Setup
 
 ## Overview
-This document outlines my experience installing and setting up **Proxmox VE** on my **Dell PowerEdge R230** server. It covers everything from installation, networking, VM setup, and optimizations, based on what I configured in my home lab.
+This document outlines my **Proxmox VE** installation and setup on a **Dell PowerEdge R230** server. It includes networking, backup strategy, performance optimizations, and VM configurations for my home lab.
 
 ---
 
 ## 1. Installing Proxmox
 
-### 1. Downloading Proxmox VE
-I started by downloading the latest **Proxmox VE ISO** from the [Proxmox Download Page](https://www.proxmox.com/en/downloads). To create a bootable USB, I used:
+### - Downloading Proxmox VE
+I downloaded the latest **Proxmox VE ISO** from the [Proxmox Download Page](https://www.proxmox.com/en/downloads) and created a bootable USB:
 - **Windows:** [Rufus](https://rufus.ie/)
 - **Linux/macOS:**
   ```bash
   sudo dd if=proxmox-ve.iso of=/dev/sdX bs=4M status=progress
   ```
 
-### 2. Installing Proxmox on My Server
-Once my bootable USB was ready, I followed these steps:
-1. Booted my server from the USB.
-2. Selected **Install Proxmox VE**.
-3. Chose the installation disk (**1TB SSD** in my case).
-4. Set a **root password and email**.
-5. Configured **network settings** (I opted for a static IP).
-6. Finished installation and rebooted.
+### - Installing Proxmox on My Server
+✔ Booted the server from the USB.  
+✔ Selected **Install Proxmox VE**.  
+✔ Chose the installation disk (**1TB SSD**).  
+✔ Set a **root password and email**.  
+✔ Configured **network settings** (static IP).  
+✔ Finished installation and rebooted.  
 
-### 3. Accessing the Proxmox Web Interface
-After installation, I accessed the Proxmox Web GUI using:
+### - Accessing the Proxmox Web Interface
+Accessed Proxmox via:
 ```bash
 https://[proxmox-ip]:8006
 ```
-I logged in with:
+Login credentials:
 - **Username:** `root`
-- **Password:** (the one I set during installation)
+- **Password:** (set during installation)
 
 ---
 
 ## 2. Post-Installation Configuration
 
-### 1. Removing the Enterprise Repository (Since I Don't Have a Subscription)
+### - Removing Enterprise Repository (No Subscription)
 ```bash
 sed -i 's/^deb/#deb/g' /etc/apt/sources.list.d/pve-enterprise.list
 ```
 
-### 2. Adding the No-Subscription Repository & Updating the System
+### - Adding No-Subscription Repository & Updating System
 ```bash
 echo 'deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription' > /etc/apt/sources.list.d/pve-no-subscription.list
 apt update && apt full-upgrade -y
 ```
 
-### 3. Enabling the Proxmox Web GUI Without Subscription Warnings
-```bash
-sed -i '/proxmox.com/d' /etc/apt/sources.list.d/*
-```
-
-### 4. Enabling QEMU Guest Agent
-To improve VM performance and communication with Proxmox, I installed:
+### - Enabling QEMU Guest Agent for VMs
 ```bash
 apt install -y qemu-guest-agent
 systemctl enable qemu-guest-agent --now
@@ -64,8 +57,8 @@ systemctl enable qemu-guest-agent --now
 
 ## 3. Configuring Networking
 
-### 1. Setting Up a Network Bridge (`vmbr0`)
-I needed my VMs to have external network access, so I configured a network bridge:
+### - Setting Up a Network Bridge (`vmbr0`)
+Configured the network bridge to allow VM network access:
 ```bash
 nano /etc/network/interfaces
 ```
@@ -84,41 +77,68 @@ iface vmbr0 inet static
 systemctl restart networking
 ```
 
-### 2. Assigning Network to VMs
-When creating a VM, I made sure to select **`vmbr0`** as the network adapter.
+### - Assigning Network to VMs
+When creating a VM, I selected **`vmbr0`** as the network adapter.
 
 ---
 
-## 4. Configuring Storage
+## 4. Configuring Backup Strategy
 
-### 1. Checking Storage Layout
-```bash
-lsblk
-```
+### - Automated Snapshot and Full Backup Schedule
+Configured a backup job with **ZSTD compression**:
+✔ **Snapshots:**
+  - **Daily:** Keep last **7 days**
+  - **Weekly:** Keep last **4 weeks**
+  - **Monthly:** Keep last **3 months**
+✔ **Full Backups:**
+  - **Weekly:** Keep **2 weeks**
+  - **Monthly:** Keep **1 month**
 
-### 2. Expanding Local-LVM for VM Storage
-```bash
-lvextend -l +100%FREE /dev/pve/data
-resize2fs /dev/pve/data
-```
+### - Enabling Automatic Backup Cleanup
+Proxmox automatically removes old backups:
+- **Retention settings applied** to delete outdated snapshots/full backups.
+- Storage usage monitored using:
+  ```bash
+  du -sh /var/lib/vz/dump/
+  ```
 
 ---
 
-## 5. Creating a Windows 11 VM
+## 5. Performance Optimizations
 
-### 1. Uploading the Windows 11 ISO & VirtIO Drivers
-I uploaded `Win11_24H2_English_x64.iso` and `virtio-win.iso` to Proxmox via **Storage → Upload**.
+### - CPU Configuration
+✔ **CPU Type:** Already set to **Host** to allow full hardware utilization.
 
-### 2. Creating the VM
-I configured the VM as follows:
+### - Enabling TRIM for SSD Performance
+To maintain SSD efficiency, I enabled TRIM:
+```bash
+fstrim -av
+systemctl enable fstrim.timer
+```
+
+### - Optimizing Disk Performance
+For better Windows VM disk performance, I changed disk caching:
+- **Proxmox Web UI → VM → Hardware → Hard Disk → Cache Mode:** `Write Back`
+
+### - Memory Optimization
+- Increased Windows 11 VM RAM to **8192MB (8GB)** for improved performance.
+
+---
+
+## 6. Windows 11 VM Setup
+
+### - Uploading Windows 11 ISO & VirtIO Drivers
+Uploaded `Win11_24H2_English_x64.iso` and `virtio-win.iso` to Proxmox via **Storage → Upload**.
+
+### - Creating the VM
 - **OS:** `Microsoft Windows 11/2022`
 - **BIOS:** `OVMF (UEFI)`
-- **TPM 2.0:** Enabled for Windows 11 compliance
+- **TPM 2.0:** Enabled
 - **Disk:** `VirtIO SCSI`
 - **Network:** `VirtIO (paravirtualized)`
 
-### 3. Installing Windows 11 & VirtIO Drivers
-During installation, I had to load **VirtIO storage drivers** manually:
+### - Installing Windows 11 & VirtIO Drivers
+During installation, I manually loaded the **VirtIO storage drivers**:
 ```bash
 D:\viostor\w11\amd64
 ```
@@ -130,38 +150,20 @@ Lastly, I installed the VirtIO guest tools for better performance.
 
 ---
 
-## 6. Security & Optimization
+## 7. Future Plans & Next Steps
 
-### 1. Enabling Automatic Updates
-```bash
-echo "APT::Periodic::Update-Package-Lists \"1\";" | tee /etc/apt/apt.conf.d/10periodic
-```
-
-### 2. Configuring a Basic Firewall (`ufw`)
-```bash
-apt install ufw -y
-ufw default deny incoming
-ufw default allow outgoing
-ufw allow 8006/tcp  # Allow Proxmox Web GUI access
-ufw enable
-```
-
-### 3. Setting Up Backups
-I scheduled daily VM backups via **Datacenter → Backup**, targeting external storage.
+✔ **Set Up Storage Alerts** (to monitor backup space usage).  
+✔ **Expand VM Lab**:
+   - Add Linux-based VMs for testing server/networking setups.
+   - Deploy a Windows Server VM for Active Directory testing.
+✔ **Enhance Security**:
+   - Implement SSH hardening & Fail2Ban.
+   - Set up remote access VPN (Tailscale/WireGuard).
+✔ **Monitor Performance**:
+   - Deploy Grafana & Prometheus for resource tracking.
 
 ---
 
-## 7. Final Steps & Testing
+### **Summary**
+This document reflects my complete **Proxmox VE setup, backup strategy, and performance optimizations**. My Proxmox home lab is now fully operational, with optimized configurations and efficient backup handling.
 
-After setup, I ran a few tests:
-- Verified connectivity:
-```bash
-ping 8.8.8.8
-```
-- Took a snapshot of my Windows VM before making further changes.
-- Monitored Proxmox logs:
-```bash
-tail -f /var/log/syslog
-```
-
-With everything set up, my Proxmox home lab is fully operational!
