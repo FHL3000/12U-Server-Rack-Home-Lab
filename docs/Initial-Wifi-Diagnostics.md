@@ -2,6 +2,7 @@
 
 ## Overview
 This document details the **Wi-Fi performance**, **network throughput**, and **ISP speed test** results from different locations within the network. The tests include:
+
 ▪️ **Wi-Fi iPerf3 throughput tests**  
 ▪️ **Speed tests between Raspberry Pi, Home Lab, and ISP Router**  
 ▪️ **ISP Internet speed tests with bandwidth limitations**  
