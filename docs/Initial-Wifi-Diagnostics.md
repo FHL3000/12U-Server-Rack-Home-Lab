@@ -39,7 +39,7 @@ Wi-Fi performance was tested using **iPerf3** from different locations.
 ▪️ **Future improvements will help mitigate interference**.  
 
  **Wi-Fi Performance (Downstairs)**  
-![Downstairs Wi-Fi iPerf3](../iperf3%20Wifi%20Results%20Downstairs.png)  
+(Images/iperf3-Wifi-Results-Downstairs.png) 
 
 ▪️ **Total Transfer**: **290 MB** (Sender) / **287 MB** (Receiver)  
 ▪️ **Bitrate**: **243 Mbps (Sender) / 240 Mbps (Receiver)**  
