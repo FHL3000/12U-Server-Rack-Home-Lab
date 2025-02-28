@@ -28,7 +28,7 @@ This document details the **Wi-Fi performance**, **network throughput**, and **I
 Wi-Fi performance was tested using **iPerf3** from different locations.  
 
 **Wi-Fi Performance (Upstairs)**  
-12U-Server-Rack-Home-Lab/Images/iperf3-Wifi-Results-Upstairs.png
+Images/iperf3-Wifi Results-Upstairs.png
 
 ▪️ **Total Transfer**: **166 MB** (Sender) / **164 MB** (Receiver)  
 ▪️ **Bitrate**: **139 Mbps (Sender) / 137 Mbps (Receiver)**  
