@@ -27,9 +27,7 @@ This document details the **Wi-Fi performance**, **network throughput**, and **I
 ## Wi-Fi iPerf3 Speed Tests
 Wi-Fi performance was tested using **iPerf3** from different locations.  
 
-**Wi-Fi Performance (Upstairs)**  
-(Images/iperf3-Wifi-Results-Upstairs.png)
-
+**Wi-Fi Performance (Upstairs)** 
 ▪️ **Total Transfer**: **166 MB** (Sender) / **164 MB** (Receiver)  
 ▪️ **Bitrate**: **139 Mbps (Sender) / 137 Mbps (Receiver)**  
 
@@ -39,8 +37,6 @@ Wi-Fi performance was tested using **iPerf3** from different locations.
 ▪️ **Future improvements will help mitigate interference**.  
 
  **Wi-Fi Performance (Downstairs)**  
-(Images/iperf3-Wifi-Results-Downstairs.png) 
-
 ▪️ **Total Transfer**: **290 MB** (Sender) / **287 MB** (Receiver)  
 ▪️ **Bitrate**: **243 Mbps (Sender) / 240 Mbps (Receiver)**  
 
