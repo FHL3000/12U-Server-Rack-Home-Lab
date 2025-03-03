@@ -27,6 +27,7 @@ This repository documents the build, configuration, and maintenance of my 12U ra
 - **Compute:** Raspberry Pi 5
 - **Power:** 8-plug PDU for power distribution
 - **Accessories:** Patch panel, custom cables, cable management solutions
+
 ![12u Rack Complete](Images/V1-Rack-Complete.JPG)
 
 ## Network Architecture
