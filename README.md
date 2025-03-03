@@ -1,7 +1,5 @@
 # 12U Rack Home-Lab Project
 
-![Home Lab Network Topology](https://raw.githubusercontent.com/username/12u-rack-homelab/main/images/network-topology.png)
-
 ## Overview
 
 This repository documents the build, configuration, and maintenance of my 12U rack home lab environment. The setup features a comprehensive networking infrastructure with VLAN segmentation, virtualization capabilities, and structured hardware organization—all designed to provide a secure, flexible platform for learning, testing, and hosting various services.
@@ -29,6 +27,7 @@ This repository documents the build, configuration, and maintenance of my 12U ra
 - **Compute:** Raspberry Pi 5
 - **Power:** 8-plug PDU for power distribution
 - **Accessories:** Patch panel, custom cables, cable management solutions
+![12u Rack Complete](Images/V1-Rack-Complete.JPG)
 
 ## Network Architecture
 
