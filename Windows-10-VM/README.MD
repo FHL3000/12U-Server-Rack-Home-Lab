@@ -28,11 +28,26 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 ## VM Configuration in Proxmox
 
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+
+<!-- Left: Table -->
+<div>
+
 ### General
+
 | Option | Value |
 |--------|-------|
-| Name | win10-lab |
-| VM ID | (auto-generated) |
+| Name   | win10-lab |
+| VM ID  | (auto-generated) |
+
+</div>
+
+<!-- Right: Image -->
+<div>
+  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/4-OS-Selections.png" width="300"/>
+</div>
+
+</div>
 
 ### OS
 | Option | Value |
