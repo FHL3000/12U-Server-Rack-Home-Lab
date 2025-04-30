@@ -67,6 +67,8 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
   </tr>
 </table>
 
+https://github.com/FHL3000/12U-Server-Rack-Home-Lab/blob/main/Windows-10-VM/Install-Images/Screenshots/4-OS-Selections.png
+
 ### System
 | Option | Value |
 |--------|-------|
