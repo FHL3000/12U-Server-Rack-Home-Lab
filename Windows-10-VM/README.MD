@@ -13,9 +13,13 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 | VM Storage | Minimum 32GB disk, 8GB RAM recommended |
 | Internet | For Windows updates and guest tools setup |
 
-Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png
-Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png
-Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png
+<table>
+  <tr>
+    <td>![Windows ISO Download](Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png)</td>
+    <td>![VirtIO Download](Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png)</td>
+    <td>![Upload ISO](Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png)</td>
+  </tr>
+</table>
 
 ---
 
