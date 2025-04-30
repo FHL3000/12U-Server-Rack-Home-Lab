@@ -28,46 +28,6 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 ## VM Configuration in Proxmox
 
-### General
-
-| Option | Value |
-|--------|-------|
-| Name   | win10-lab |
-| VM ID  | (auto-generated) |
-
-<table>
-  <tr>
-    <td>
-
-<h3>OS</h3>
-
-<table>
-  <tr>
-    <th>Option</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>ISO</td>
-    <td>Win10_22H2_English_x64.iso</td>
-  </tr>
-  <tr>
-    <td>Guest OS</td>
-    <td>Microsoft Windows 11/2022/2025</td>
-  </tr>
-  <tr>
-    <td>Add VirtIO ISO</td>
-    <td>Yes</td>
-  </tr>
-</table>
-
-    </td>
-    <td>
-      <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/4-OS-Selections.png" width="300"/>
-    </td>
-  </tr>
-</table>
-
-https://github.com/FHL3000/12U-Server-Rack-Home-Lab/blob/main/Windows-10-VM/Install-Images/Screenshots/4-OS-Selections.png
 
 ### System
 | Option | Value |
