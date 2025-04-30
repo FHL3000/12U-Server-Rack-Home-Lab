@@ -4,14 +4,19 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 ---
 
+<div align="center">
+
 ## Requirements
-| Item | Description |
-|------|-------------|
-| Proxmox VE | Hypervisor installed and accessible |
+
+| Item         | Description |
+|--------------|-------------|
+| Proxmox VE   | Hypervisor installed and accessible |
 | Windows 10 ISO | Downloaded from [Microsoft](https://www.microsoft.com/software-download/windows10) |
-| VirtIO ISO | Downloaded from [Fedora VirtIO Drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/) |
-| VM Storage | Minimum 32GB disk, 8GB RAM recommended |
-| Internet | For Windows updates and guest tools setup |
+| VirtIO ISO   | Downloaded from [Fedora VirtIO Drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/) |
+| VM Storage   | Minimum 32GB disk, 8GB RAM recommended |
+| Internet     | For Windows updates and guest tools setup |
+
+</div>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png" width="250"/>
