@@ -28,11 +28,6 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 ## VM Configuration in Proxmox
 
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-
-<!-- Left: Table -->
-<div>
-
 ### General
 
 | Option | Value |
@@ -40,19 +35,37 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 | Name   | win10-lab |
 | VM ID  | (auto-generated) |
 
-<!-- Right: Image -->
-<div>
-  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/4-OS-Selections.png" width="300"/>
-</div>
+<table>
+  <tr>
+    <td>
 
-</div>
+<h3>OS</h3>
 
-### OS
-| Option | Value |
-|--------|-------|
-| ISO | Win10_22H2_English_x64.iso |
-| Guest OS | Microsoft Windows 11/2022/2025 |
-| Add VirtIO ISO | Yes |
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Value</th>
+  </tr>
+  <tr>
+    <td>ISO</td>
+    <td>Win10_22H2_English_x64.iso</td>
+  </tr>
+  <tr>
+    <td>Guest OS</td>
+    <td>Microsoft Windows 11/2022/2025</td>
+  </tr>
+  <tr>
+    <td>Add VirtIO ISO</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/4-OS-Selections.png" width="300"/>
+    </td>
+  </tr>
+</table>
 
 ### System
 | Option | Value |
