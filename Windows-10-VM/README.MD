@@ -14,9 +14,9 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 | Internet | For Windows updates and guest tools setup |
 
 <p align="center">
-  <img src="Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png" width="250"/>
-  <img src="Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png" width="250"/>
-  <img src="Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png" width="250"/>
+  <img src="Install-Images/Screenshots/1-Windows-ISO-Download.png" width="250"/>
+  <img src="Install-Images/Screenshots/2-VirtIO-Download.png" width="250"/>
+  <img src="Install-Images/Screenshots/3-Upload-ISO-Proxmox.png" width="250"/>
 </p>
 
 
