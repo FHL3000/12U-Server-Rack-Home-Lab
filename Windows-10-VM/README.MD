@@ -3,11 +3,6 @@
 This document outlines how I installed **Windows 10 Pro** on a virtual machine using the **Proxmox VE hypervisor**. It includes complete configuration steps, driver setup using VirtIO, and future plans for optimization and feature enhancement. This VM is intended for IT labs, certification prep, and general system administration practice.
 
 ---
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png" width="250"/>
-  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png" width="250"/>
-  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png" width="250"/>
-</p> 
 
 ## Requirements
 | Item | Description |
@@ -17,6 +12,12 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 | VirtIO ISO | Downloaded from [Fedora VirtIO Drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/latest-virtio/) |
 | VM Storage | Minimum 32GB disk, 8GB RAM recommended |
 | Internet | For Windows updates and guest tools setup |
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png" width="250"/>
+  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png" width="250"/>
+  <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/main/Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png" width="250"/>
+</p> 
 
 ---
 
