@@ -15,9 +15,14 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 <table>
   <tr>
-    <td>![Windows ISO Download](Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png)</td>
-    <td>![VirtIO Download](Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png)</td>
-    <td>![Upload ISO](Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png)</td>
+    <td><img src="Windows-10-VM/Install-Images/Screenshots/1-Windows-ISO-Download.png" width="250"/></td>
+    <td><img src="Windows-10-VM/Install-Images/Screenshots/2-VirtIO-Download.png" width="250"/></td>
+    <td><img src="Windows-10-VM/Install-Images/Screenshots/3-Upload-ISO-Proxmox.png" width="250"/></td>
+  </tr>
+  <tr>
+    <td align="center">**Windows ISO Download**</td>
+    <td align="center">**VirtIO Download**</td>
+    <td align="center">**Upload ISO to Proxmox**</td>
   </tr>
 </table>
 
