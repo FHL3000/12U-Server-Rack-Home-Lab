@@ -49,6 +49,9 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
   </table>
 
 ### Disks
+
+![Disk Selections Screenshot](https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/e24543396f70faf6183beae959f214a05f12525b/Windows-10-VM/Install-Images/Screenshots/6-Disk-Selections.png)
+
 | Option | Value |
 |--------|-------|
 | Bus/Device | SCSI (VirtIO) |
