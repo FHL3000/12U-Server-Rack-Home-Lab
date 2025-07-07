@@ -48,6 +48,30 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
     </tbody>
   </table>
 
+<table>
+  <tr>
+    <td>
+
+      <table>
+        <thead>
+          <tr><th>Option</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>BIOS</td><td>OVMF (UEFI)</td></tr>
+          <tr><td>Machine</td><td>q35</td></tr>
+          <tr><td>Add EFI Disk</td><td>Yes</td></tr>
+          <tr><td>Add TPM</td><td>Yes (TPM 2.0)</td></tr>
+          <tr><td>Storage</td><td>local or local-lvm</td></tr>
+        </tbody>
+      </table>
+
+    </td>
+    <td style="vertical-align: top; padding-left: 20px;">
+      <img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/a51dcc8d17fb8ca52944057a7b3edf03d53de667/Windows-10-VM/Install-Images/Screenshots/5-System-Selections.png" alt="System Selection Screenshot" width="350">
+    </td>
+  </tr>
+</table>
+
 ### Disks
 | Option | Value |
 |--------|-------|
