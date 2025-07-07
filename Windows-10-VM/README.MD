@@ -30,6 +30,9 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 
 ### System
+
+ <img https://github.com/FHL3000/12U-Server-Rack-Home-Lab/blob/a51dcc8d17fb8ca52944057a7b3edf03d53de667/Windows-10-VM/Install-Images/Screenshots/5-System-Selections.png />
+
 | Option | Value |
 |--------|-------|
 | BIOS | OVMF (UEFI) |
