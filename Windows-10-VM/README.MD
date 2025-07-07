@@ -128,13 +128,20 @@ D:\NetKVM\w10\amd64
 
 ---
 
-## Screenshots (To Be Added)
-I will insert step-by-step visuals for the following sections:
-- ISO Selection
-- BIOS/TPM Configuration
-- Storage Driver Load Step
-- Network Driver Install Step
-- Final Connection Confirmation
+## Screenshots
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/a04245c94ada427563a86fbfa826e38e404c9fe8/Windows-10-VM/Install-Images/Screenshots/11-Windows10-Driver-Disk-Allocation.png" alt="Windows 10 Driver Disk Allocation" width="350">
+
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/a04245c94ada427563a86fbfa826e38e404c9fe8/Windows-10-VM/Install-Images/Screenshots/13-Network-Adapter-Problem.png" alt="Network Adapter Problem in Windows 10" width="350">
+
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/579e27f6841c51d6fc37cae23bec956fca5f56f4/Windows-10-VM/Install-Images/Screenshots/14-Navigating-to-Solution1%20.png" alt="Navigating to Network Driver Solution" width="350">
+
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/579e27f6841c51d6fc37cae23bec956fca5f56f4/Windows-10-VM/Install-Images/Screenshots/15-Installing-Network-Adapter%20.png" alt="Installing Network Adapter - Step 1" width="350">
+
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/579e27f6841c51d6fc37cae23bec956fca5f56f4/Windows-10-VM/Install-Images/Screenshots/16-Installing-Network-Adapter.png" alt="Installing Network Adapter - Step 2" width="350">
+
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/579e27f6841c51d6fc37cae23bec956fca5f56f4/Windows-10-VM/Install-Images/Screenshots/17.Successful-Install.png" alt="Successful Network Adapter Install" width="350">
+
+<img src="https://raw.githubusercontent.com/FHL3000/12U-Server-Rack-Home-Lab/579e27f6841c51d6fc37cae23bec956fca5f56f4/Windows-10-VM/Install-Images/Screenshots/18-Network-Connected.png" alt="Network Successfully Connected in Windows 10" width="350">
 
 ---
 
