@@ -31,15 +31,22 @@ This document outlines how I installed **Windows 10 Pro** on a virtual machine u
 
 ### System
 
-![System Selection Screenshot](https://github.com/FHL3000/12U-Server-Rack-Home-Lab/blob/a51dcc8d17fb8ca52944057a7b3edf03d53de667/Windows-10-VM/Install-Images/Screenshots/5-System-Selections.png?raw=true)
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <table>
+    <thead>
+      <tr><th>Option</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>BIOS</td><td>OVMF (UEFI)</td></tr>
+      <tr><td>Machine</td><td>q35</td></tr>
+      <tr><td>Add EFI Disk</td><td>Yes</td></tr>
+      <tr><td>Add TPM</td><td>Yes (TPM 2.0)</td></tr>
+      <tr><td>Storage</td><td>local or local-lvm</td></tr>
+    </tbody>
+  </table>
 
-| Option | Value |
-|--------|-------|
-| BIOS | OVMF (UEFI) |
-| Machine | q35 |
-| Add EFI Disk | Yes |
-| Add TPM | Yes (TPM 2.0) |
-| Storage | local or local-lvm |
+  <img src="https://github.com/FHL3000/12U-Server-Rack-Home-Lab/blob/a51dcc8d17fb8ca52944057a7b3edf03d53de667/Windows-10-VM/Install-Images/Screenshots/5-System-Selections.png?raw=true" alt="System Selection Screenshot" width="400"/>
+</div>
 
 ### Disks
 | Option | Value |
